@@ -1,5 +1,11 @@
 #!/usr/bin/env bash
 
+#echo "setup the build environment"
+#wget https://raw.githubusercontent.com/2spirit/scripts/master/setup_build_envirionment-ubuntu.sh
+#chmod +x setup_build_envirionment-ubuntu.sh
+#./setup_build_envirionment-ubuntu.sh
+#rm setup_build_envirionment-ubuntu.sh
+
 echo "create directories"
 mkdir -p ~/bin
 mkdir -p ~/android/lineage 
