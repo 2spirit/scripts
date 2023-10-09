@@ -1,0 +1,8 @@
+
+# Optimize battery backup and kernel parameters
+su -c "cmd package bg-dexopt-job"
+su -c "cmd package compile -a -f --compile-layouts"
+
+# Reset battery stats
+su -c "dumpsys batterystats --reset-all"
+
