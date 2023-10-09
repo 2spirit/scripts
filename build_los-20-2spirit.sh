@@ -34,7 +34,7 @@ echo "sync the source"
 
 echo "Copy missing google lib for keyboard swipe"
 mkdir -p ~/android/lineage/out/target/product/sweet/product/lib64/
-wget https://raw.githubusercontent.com/2spirit/manifests/main/libjni_latinimegoogle.so -P ~/android/lineage/out/target/product/sweet/product/lib64/
+wget https://raw.githubusercontent.com/2spirit/scripts/main/libjni_latinimegoogle.so -P ~/android/lineage/out/target/product/sweet/product/lib64/
 
 echo "enable ccache"
 export USE_CCACHE=1 && export CCACHE_DIR=~/android/ccache/lineage && export CCACHE_EXEC=/usr/bin/ccache && ccache -M 100G
