@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-#echo "setup the build environment"
-#wget https://raw.githubusercontent.com/2spirit/scripts/master/setup_build_envirionment-ubuntu.sh
-#chmod +x setup_build_envirionment-ubuntu.sh
-#./setup_build_envirionment-ubuntu.sh
+echo "setup the build environment"
+wget https://raw.githubusercontent.com/2spirit/scripts/master/setup_build_envirionment-ubuntu.sh
+chmod +x setup_build_envirionment-ubuntu.sh
+./setup_build_envirionment-ubuntu.sh
 #rm setup_build_envirionment-ubuntu.sh
 
 echo "create directories"
@@ -16,11 +16,9 @@ echo "download last repo version"
 curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
 chmod a+x ~/bin/repo
 
-#echo "configure git" # - replace user name and email with your own ones
-#echo "configure git" # - replace user name and email with your own ones
-#git config --global user.name "Your Name"
-#git config --global user.email "yourmail@email.com"
-#git config --global color.ui true #this stops the repo init colorization prompt
+git config --global user.name "build"
+git config --global user.email "build@email.com"
+git config --global color.ui true #this stops the repo init colorization prompt
 
 echo "initiate the LineageOS repo"
 cd ~/android/lineage
