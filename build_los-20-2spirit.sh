@@ -25,14 +25,14 @@ cd ~/android/lineage
 ~/bin/repo init -u https://github.com/2spirit/android.git -b lineage-20.0 --git-lfs
 
 echo "clone local manifest"
-wget https://raw.githubusercontent.com/2spirit/manifests/main/sweet_los-20_2spirit_roomservice.xml -P ~/android/lineage/.repo/local_manifests/
+wget --timestamping https://raw.githubusercontent.com/2spirit/manifests/main/sweet_los-20_2spirit_roomservice.xml -o ~/android/lineage/.repo/local_manifests/sweet_los-20_2spirit_roomservice.xml
 
 echo "sync the source"
 ~/bin/repo sync -j$(nproc --all)
 
 echo "Copy missing google lib for keyboard swipe"
 mkdir -p ~/android/lineage/out/target/product/sweet/product/lib64/
-wget https://raw.githubusercontent.com/2spirit/scripts/main/libjni_latinimegoogle.so -P ~/android/lineage/out/target/product/sweet/product/lib64/
+wget --timestamping https://raw.githubusercontent.com/2spirit/scripts/main/libjni_latinimegoogle.so -o ~/android/lineage/out/target/product/sweet/product/lib64/libjni_latinimegoogle.so
 
 echo "enable ccache"
 export USE_CCACHE=1 && export CCACHE_DIR=~/android/ccache/lineage && export CCACHE_EXEC=/usr/bin/ccache && ccache -M 100G
