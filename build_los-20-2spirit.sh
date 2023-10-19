@@ -36,6 +36,7 @@ echo "sync the source"
 
 echo "Add Leica Camera"
 git clone https://gitlab.com/unsatifsed27/miuicamera.git -b leica vendor/xiaomi/sweet-miuicamera
+sed -i 's/"Aperture", //g' vendor/xiaomi/sweet-miuicamera/common/Android.bp
 
 echo "Copy missing google lib for keyboard swipe"
 mkdir -p ~/android/lineage/out/target/product/sweet/product/lib64/
@@ -53,6 +54,9 @@ croot
 
 echo "prepare sweet for building"
 lunch lineage_sweet-userdebug
+
+echo "enable my ota update"
+echo "lineage.updater.uri=https://2spirit.github.io/sweet-los-ota.json" >> system/build.prop
 
 echo "start building"
 mka bacon -j$(nproc --all)
