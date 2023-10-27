@@ -28,7 +28,7 @@ echo "initiate the LineageOS repo"
 
 echo "clone local manifest"
 mkdir -p ~/android/lineage/.repo/local_manifests
-wget https://raw.githubusercontent.com/2spirit/manifests/main/sweet_los-20_2spirit_roomservice.xml -O ~/android/lineage/.repo/local_manifests/sweet_los-20_2spirit_roomservice.xml
+wget https://raw.githubusercontent.com/2spirit/manifests/main/sweet_los-20_2spirit_roomservice.xml -O ~/android/lineage/.repo/local_manifests/roomservice.xml
 
 echo "sync the source"
 #~/bin/repo sync -j$(nproc --all)
