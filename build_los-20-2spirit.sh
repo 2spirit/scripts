@@ -55,9 +55,6 @@ croot
 echo "prepare sweet for building"
 lunch lineage_sweet-userdebug
 
-echo "enable my ota update"
-echo "lineage.updater.uri=https://2spirit.github.io/sweet-los-ota.json" >> system/build.prop
-
 echo "start building"
 mka bacon -j$(nproc --all)
 
