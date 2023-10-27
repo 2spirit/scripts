@@ -42,6 +42,12 @@ echo "Copy missing google lib for keyboard swipe"
 mkdir -p ~/android/lineage/out/target/product/sweet/product/lib64/
 wget https://raw.githubusercontent.com/2spirit/scripts/main/libjni_latinimegoogle.so -O ~/android/lineage/out/target/product/sweet/product/lib64/libjni_latinimegoogle.so
 
+echo "sign build"
+wget https://raw.githubusercontent.com/2spirit/scripts/main/gen_key -O ~/bin/gen_key
+chmod +x ~/bin/gen_key
+~/bin/gen_key
+sed -i "1s;^;PRODUCT_DEFAULT_DEV_CERTIFICATE := user-keys/releasekey\nPRODUCT_OTA_PUBLIC_KEYS := user-keys/releasekey\n\n;" "vendor/lineage/config/common.mk"
+
 echo "enable ccache"
 export USE_CCACHE=1 && export CCACHE_DIR=~/android/ccache/lineage && export CCACHE_EXEC=/usr/bin/ccache && ccache -M 50G
 

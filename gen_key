@@ -40,3 +40,5 @@ chmod +x ~/bin/make_key
     done
   done
 
+ln -sf "$KEYS_DIR" user-keys
+
