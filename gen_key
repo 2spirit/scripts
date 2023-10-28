@@ -1,10 +1,10 @@
 #/bin/bash
 
-mkdir -pv $KEYS_DIR
-mkdir -pv ~/bin
-
 export KEYS_SUBJECT='/C=US/ST=California/L=Mountain View/O=Android/OU=Android/CN=Android/emailAddress=android@android.com'
 export KEYS_DIR=~/keys
+
+mkdir -pv ~/bin
+mkdir -pv $KEYS_DIR
 
 wget https://raw.githubusercontent.com/2spirit/scripts/main/make_key -O ~/bin/make_key
 chmod +x ~/bin/make_key
