@@ -1,8 +1,9 @@
 #!/usr/bin/env bash
 sudo apt update
 
-#echo -e "Installing some extras"
+echo -e "Installing some extras"
 #sudo apt install -y neofetch tmate ranger bash-completion neovim
+sudo apt install -y screen mc htop
 
 echo -e "Installing build essentials"
 sudo apt install -y \
