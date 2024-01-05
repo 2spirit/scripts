@@ -34,9 +34,10 @@ echo "sync the source"
 #~/bin/repo sync -j$(nproc --all)
 ~/bin/repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 
-echo "Add Leica Camera"
-git clone https://gitlab.com/unsatifsed27/miuicamera.git -b leica vendor/xiaomi/sweet-miuicamera
-sed -i 's/"Aperture", //g' vendor/xiaomi/sweet-miuicamera/common/Android.bp
+echo "Add Leica Camera from my repo"
+#git clone https://gitlab.com/unsatifsed27/miuicamera.git -b leica vendor/xiaomi/sweet-miuicamera
+git clone git://git.code.sf.net/p/leicacamera/code -b master vendor/xiaomi/sweet-miuicamera
+#sed -i 's/"Aperture", //g' vendor/xiaomi/sweet-miuicamera/common/Android.bp
 
 echo "Copy missing google lib for keyboard swipe"
 mkdir -p ~/android/lineage/out/target/product/sweet/product/lib64/
