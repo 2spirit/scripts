@@ -43,6 +43,9 @@ echo "Copy missing google lib for keyboard swipe"
 mkdir -p ~/android/lineage/out/target/product/sweet/product/lib64/
 wget https://raw.githubusercontent.com/2spirit/scripts/main/libjni_latinimegoogle.so -O ~/android/lineage/out/target/product/sweet/product/lib64/libjni_latinimegoogle.so
 
+echo "create symlink to user-keys"
+ln -sf ~/user-keys
+
 #echo "sign build"
 #wget https://raw.githubusercontent.com/2spirit/scripts/main/gen_key -O ~/bin/gen_key
 #chmod +x ~/bin/gen_key
