@@ -3,7 +3,7 @@ sudo apt update
 
 echo -e "Installing some extras"
 #sudo apt install -y neofetch tmate ranger bash-completion neovim
-sudo apt install -y screen mc htop
+sudo apt install -y screen mc htop vim lftp
 
 echo -e "Installing build essentials"
 sudo apt install -y \
